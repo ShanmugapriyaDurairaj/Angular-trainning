@@ -1,0 +1,14 @@
+
+
+
+<select [(ngModel)]="moviename">  
+  <option *ngFor="let movie of movies"  [value]="movie.title">{{movie.title}}</option>
+</select>  
+<div class='row' [ngSwitch]="moviename" >  
+  <div *ngSwitchCase="'Zootopia'">Zootopia Pressed</div>  
+  <div *ngSwitchCase="'Batman'">Batman Selected</div>  
+  <div *ngSwitchDefault>Default Option</div>  
+</div>  
+
+<div [style.font-size]="moviename == 'Zootopia' ? '24px' : '56px'">COLLL</div>
+
