@@ -15,8 +15,10 @@ import { ExCustomPipesComponent } from './compoent/ex-custom-pipes/ex-custom-pip
 import { ExCustomPipesPipe } from './pipes/ex-custom-pipes.pipe';
 import { MultiplierPipe } from './pipes/multiplier.pipe';
 import { MyserviceService } from './services/myservice.service';
+import {LoggerService} from './services/logger.service';
+import {HttpClientModule} from '@angular/common/http';
 
-
+import {ApiService} from './services/api.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +36,9 @@ import { MyserviceService } from './services/myservice.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-     
+    HttpClientModule
   ],
-  providers: [MyserviceService],
+  providers: [MyserviceService,LoggerService,ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
