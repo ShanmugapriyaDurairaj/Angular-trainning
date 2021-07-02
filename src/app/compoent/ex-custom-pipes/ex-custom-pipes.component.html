@@ -5,7 +5,16 @@
 
 <b> Services Example https://blog.angular-university.io/angular-http/</b>
 
-<ul *ngFor = "let data of user">
+<!-- <ul *ngFor = "let data of user">
     <li>Name : {{data.name}} Address: {{data.address.city}}</li>
- </ul>
+ </ul> -->
 <!-- <b>Multiply 729 is: {{729 | multiplier}}</b> -->
+
+
+<a *ngFor="let u of user" [routerLink]="['/user-details', u.id]">
+    <br>
+  {{ u.name }}
+</a>
+
+<br> Example :<br>
+<!-- <div>goToProductDetails(id) {this.router.navigate(['/product-details', id]);}</div> -->

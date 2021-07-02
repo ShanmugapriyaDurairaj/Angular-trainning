@@ -18,7 +18,12 @@ import { MyserviceService } from './services/myservice.service';
 import {LoggerService} from './services/logger.service';
 import {HttpClientModule} from '@angular/common/http';
 
-import {ApiService} from './services/api.service'
+import {ApiService} from './services/api.service';
+import { ExRoutingParamsComponent } from './compoent/ex-routing-params/ex-routing-params.component';
+import { ExChildRoutesComponent } from './compoent/ex-child-routes/ex-child-routes.component';
+import { OverviewComponent } from './compoent/overview/overview.component';
+import { SpecsComponent } from './compoent/specs/specs.component';
+import { LifecycleComponent } from './compoent/lifecycle/lifecycle.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +34,11 @@ import {ApiService} from './services/api.service'
     ExCustomPipesComponent,
     ExCustomPipesPipe,
     MultiplierPipe,
+    ExRoutingParamsComponent,
+    ExChildRoutesComponent,
+    OverviewComponent,
+    SpecsComponent,
+    LifecycleComponent,
     
   ],
   imports: [
