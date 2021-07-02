@@ -9,7 +9,12 @@ import { FormsModule } from '@angular/forms';
 import { ExFormComponent } from './compoent/ex-form/ex-form.component';
 
 
-import { ReactiveFormsModule } from '@angular/forms';  
+import { ReactiveFormsModule } from '@angular/forms';
+import { ExPipesComponent } from './compoent/ex-pipes/ex-pipes.component';
+import { ExCustomPipesComponent } from './compoent/ex-custom-pipes/ex-custom-pipes.component';
+import { ExCustomPipesPipe } from './pipes/ex-custom-pipes.pipe';
+import { MultiplierPipe } from './pipes/multiplier.pipe';
+import { MyserviceService } from './services/myservice.service';
 
 
 @NgModule({
@@ -17,15 +22,21 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     AboutUsComponent,
     ExSwitchComponent,
-    ExFormComponent
+    ExFormComponent,
+    ExPipesComponent,
+    ExCustomPipesComponent,
+    ExCustomPipesPipe,
+    MultiplierPipe,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule  
+    ReactiveFormsModule,
+     
   ],
-  providers: [],
+  providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
