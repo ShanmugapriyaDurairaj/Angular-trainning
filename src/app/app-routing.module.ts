@@ -9,8 +9,7 @@ const routes: Routes = [
   { path: '', component: ExCustomPipesComponent },
   { path: 'users', component: ExCustomPipesComponent },
   { path: 'user-details/:id', component: ExRoutingParamsComponent,
-      children: [
-        { path: 'overview', redirectTo: 'overview', pathMatch: 'full' }, //routing cgild
+      children: [ //routing child 
         { path: 'overview', component: OverviewComponent },
         { path: 'specs', component: SpecsComponent }
       ]

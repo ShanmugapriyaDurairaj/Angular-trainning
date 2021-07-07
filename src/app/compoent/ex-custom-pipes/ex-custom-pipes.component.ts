@@ -18,10 +18,13 @@ export class ExCustomPipesComponent implements OnInit {
   ngOnInit(): void {
     this.todaydate = this.myservice.showTodayDate()
     console.log(this.todaydate);
-     this.api.getAll("http://jsonplaceholder.typicode.com/users").subscribe(res => {
+   // let url ="http://jsonplaceholder.typicode.com/users"
+    let url ="http://localhost:3000/sample_json"
+     this.api.getAll(url).subscribe(res => {
       console.log(res)   
     
-      this.user=res;
+      this.user=res.CO;
+      
      }, error => {
     });
 

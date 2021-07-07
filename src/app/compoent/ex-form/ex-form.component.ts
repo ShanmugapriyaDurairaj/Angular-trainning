@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';  
+import { ApiService } from 'src/app/services/api.service';
 @Component({
   selector: 'app-ex-form',
   templateUrl: './ex-form.component.html',
@@ -27,7 +28,7 @@ export class ExFormComponent implements OnInit {
   form_group_user=[];
   
 
-  constructor() { }
+  constructor(private api : ApiService) { }
 
   ngOnInit(): void {
   }
@@ -61,5 +62,13 @@ export class ExFormComponent implements OnInit {
     
     console.log(this.form_group_user)
     console.warn(this.profileForm.value);
+    let url ="http://localhost:3000/s_post";
+    
+    this.api.create(url,this.profileForm.value).subscribe(res =>{
+      console.log(res)
+      if(res.status== true){
+        alert(res.msg)
+      }
+    })
   }
 }
