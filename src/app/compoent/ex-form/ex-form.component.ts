@@ -44,6 +44,7 @@ export class ExFormComponent implements OnInit {
       name : this.name,
       phone: this.phone
     }
+
     // added in Array 
 
     this.user.push(user_ob);
@@ -71,4 +72,7 @@ export class ExFormComponent implements OnInit {
       }
     })
   }
+
+ 
+
 }

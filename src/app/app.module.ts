@@ -23,7 +23,8 @@ import { ExRoutingParamsComponent } from './compoent/ex-routing-params/ex-routin
 import { ExChildRoutesComponent } from './compoent/ex-child-routes/ex-child-routes.component';
 import { OverviewComponent } from './compoent/overview/overview.component';
 import { SpecsComponent } from './compoent/specs/specs.component';
-import { LifecycleComponent } from './compoent/lifecycle/lifecycle.component'
+import { LifecycleComponent } from './compoent/lifecycle/lifecycle.component';
+import { ExObservablePromiseComponent } from './compoent/ex-observable-promise/ex-observable-promise.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { LifecycleComponent } from './compoent/lifecycle/lifecycle.component'
     OverviewComponent,
     SpecsComponent,
     LifecycleComponent,
+    ExObservablePromiseComponent,
     
   ],
   imports: [
